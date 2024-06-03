@@ -1,0 +1,278 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/*  ++++++++++  General styling  ++++++++++++  */
+
+html {
+    scroll-padding-top: 56px;
+}
+
+.imgIconWidth {
+    width: 32px;
+    height: 32px;
+}
+
+.w-90 {
+    width: 90%;
+}
+
+.w-85 {
+    width: 85%;
+}
+
+.text-lightWhite {
+    color: #CDE1F8;
+}
+
+.bg-offWhite {
+    background-color: #F5F5F5;
+}
+
+.bg-offWhite2 {
+    background-color: #F8F8F8;
+}
+
+.bg-Blue {
+    background-color: #0062D3;
+}
+
+.fs-1_2 {
+    font-size: 1.2rem !important
+}
+
+.fs-0_8 {
+    font-size: 0.8rem !important
+}
+
+/*  ++++++++++  Classes  ++++++++++++  */
+
+.lineDecoration {
+    width: 40px;
+    height: 5px;
+
+    background-color: #0078FF;
+    margin: 0 auto;
+}
+
+/*  ++++++++++  NavBar  ++++++++++++  */
+.nav-link {
+    position: relative;
+    color: white;
+}
+
+.nav-link:hover {
+    color: white;
+}
+
+.nav-link::before {
+    content: "";
+    position: absolute;
+
+    width: 0;
+    height: 3px;
+
+    background-color: white;
+
+    bottom: 0;
+    left: 0;
+    transition: width 0.3s ease-out;
+}
+
+.nav-link:hover::before {
+    width: 100%;
+}
+
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+    color: white;
+}
+
+.bg-body-tertiary {
+    --bs-bg-opacity: 0.90;
+    background-color: rgba(0, 0, 0, var(--bs-bg-opacity)) !important;
+}
+
+
+/*  ++++++++++  Home section  ++++++++++++  */
+.Home {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5),
+            rgba(0, 0, 0, 0.5)), url(../images/hero-bg.jpg);
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.Home p::after {
+    content: '';
+    animation: header-animation 5s infinite;
+}
+
+@keyframes header-animation {
+    0% {
+        content: "|";
+    }
+
+    15% {
+        content: "Developer|";
+    }
+
+    30% {
+        content: "|";
+    }
+
+    45% {
+        content: "Larry Daniels|";
+    }
+
+    60% {
+        content: "|";
+    }
+
+    75% {
+        content: "Designer|";
+    }
+
+    90% {
+        content: "|";
+    }
+
+
+}
+
+/*  ++++++++++  About section  ++++++++++++  */
+.About .aboutMeHeader {
+    position: relative;
+}
+
+.About .aboutMeHeader::before {
+    content: "";
+    position: absolute;
+
+    width: 100px;
+    height: 3px;
+    background-color: #0078FF;
+
+    left: 0;
+    bottom: -8;
+}
+
+
+/*  ++++++++++  Services section  ++++++++++++  */
+.Services .content .disab {
+    opacity: 0%;
+    transition-duration: 0.5s;
+}
+
+.Services .content:hover .disab {
+    opacity: 100%;
+}
+
+
+/*  ++++++++++  Counter section  ++++++++++++  */
+.Counter {
+    background-image: linear-gradient(rgba(0, 120, 255, 0.7),
+            rgba(0, 120, 255, 0.7)), url(../images/counters-bg.jpg);
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+/*  ++++++++++  Work section  ++++++++++++  */
+.Work .item img {
+    transition-duration: 0.5s;
+}
+
+.Work .item:hover img {
+    transform: scale(1.1);
+}
+
+
+/*  ++++++++++  Testimonial section  ++++++++++++  */
+.Testimonial {
+    background-image: linear-gradient(rgba(0, 120, 255, 0.7),
+            rgba(0, 120, 255, 0.7)), url(../images/overlay-bg.jpg);
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.Testimonial .carousel-indicators {
+    bottom: -40px;
+}
+
+.Testimonial .carousel-indicators [data-bs-target] {
+    width: 11px;
+    height: 11px;
+
+    border-radius: 50%;
+}
+
+/*  ++++++++++  Blog section  ++++++++++++  */
+.Blog .seeMoreHeader,
+.Blog .morganHeader {
+    transition-duration: 0.5s;
+}
+
+.Blog .seeMoreHeader:hover,
+.Blog .morganHeader:hover {
+    color: #0078FF;
+}
+
+
+/*  ++++++++++  Contact section  ++++++++++++  */
+.Contact {
+    background-image: linear-gradient(rgba(0, 120, 255, 0.7),
+            rgba(0, 120, 255, 0.7)), url(../images/overlay-bg.jpg);
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.Contact .sendMessageHeader {
+    position: relative;
+}
+
+.Contact .sendMessageHeader::before {
+    content: "";
+    position: absolute;
+
+    width: 100px;
+    height: 3px;
+    background-color: #0078FF;
+
+    left: 0;
+    bottom: -8;
+}
+
+.Contact .inTouchHeader {
+    position: relative;
+}
+
+.Contact .inTouchHeader::before {
+    content: "";
+    position: absolute;
+
+    width: 100px;
+    height: 3px;
+    background-color: #0078FF;
+
+    left: 0;
+    bottom: -8;
+}
+
+.Contact .social-icons .disab {
+    opacity: 0%;
+    transition-duration: 0.5s;
+}
+
+.Contact .social-icons span:hover .disab {
+    opacity: 100%;
+}
